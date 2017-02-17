@@ -1,0 +1,25 @@
+<div>
+    <h1>Hello World</h1>
+
+    <table class="table-bordered table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="user in MainCtrl.users">
+            <td>{{user.id}}</td>
+            <td>{{user.name}}</td>
+        </tr>
+        </tbody>
+    </table>
+    <form ng-submit="MainCtrl.saveUser()" class="col-md-offset-5">
+        <p>Imie:</p>
+        <input type="text" class="inputs" id="author" ng-model="MainCtrl.details.name" required>
+        <input id="saveButton" type="submit" value="Save" class="inputs">
+    </form>
+
+
+</div>
