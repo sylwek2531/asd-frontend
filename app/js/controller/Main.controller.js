@@ -5,7 +5,7 @@
     {
         var ctrl = this;
         ctrl.details = {name: ""};
-        function init()
+        function  fetchUsers()
         {
             UserDAO.getUser().then(function (data)
             {
@@ -13,12 +13,12 @@
             });
         }
 
-        init();
+        fetchUsers();
         ctrl.saveUser = function ()
         {
             UserDAO.saveUser(ctrl.details).then(function (response)
             {
-                init();
+                fetchUsers();
             })
         }
 
